@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+#container-deatil-search {
+	width: 1080px;
+	padding: 10px;
+}
+
+.exsearchcontainer{
+	display : flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	padding: 10px;
+}
+
+.item1{
+	width: 26%;
+}
+
+.item2 {
+	width: 26%;
+}
+
+.item3 {
+	width: 18%;
+}
+
+.item4 {
+	width: 18%;
+}
+
+.where-ex{
+	margin:2%;
+}
+
+.hasDatepicker{
+	width:90px;
+}
+
+.price-ex {
+	margin: 2%;
+}
+
+.exprice{
+	margin: 2%;
+}
+
+.list-radio input {
+	margin: 2%;
+}
+
+.hasDatepicker {
+	width: 90px;
+}
+
+.list-radio {
+	padding-top: 4px;
+}
+
+.where-ex {
+	padding-top: 4px;
+	margin: 2%;
+}
+.expriod{
+		margin: 2%;
+		padding-top: 4px;
+	}
+	.exprice{
+	margin: 2%;
+	padding-top: 4px;
+	}
+/* 값 받아오는 곳 + 검색/리셋 */
+.exsearchcontainer2 {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 20px;
+	padding: 30px 40px;
+	border-top: 1px solid #999;
+	background-color: #f6f6f6;
+	margin-top: 3%;
+}
+/* 서브제목과 닫기버튼 */
+.searchTitleLine {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+	border-bottom: 1px solid #000;
+	border-bottom-color: rgb(0, 0, 0);
+}
+
+.close-btn {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	margin-top: 15px;
+}
+
+.tabList ul, li {
+	display: inline-block;
+	justify-content: left;
+	min-width: 80px;
+}
+
+.background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 1000;
+	/* 숨기기 */
+	z-index: -1;
+	opacity: 0;
+}
+
+.show {
+	opacity: 1;
+	z-index: 1000;
+	transition: all 0.5s;
+}
+
+.window {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.popup {
+	margin:7% auto;
+	background-color: #ffffff;
+	box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+	width: 1150px;
+	min-height: 550px;
+	height: 65vh;
+	border-width: 0px;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.show .popup {
+	transition: all 0.5s;
+}
+
+#subTitle-ex {
+	font-size: 30px;
+	font-weight: 600;
+	margin-top: 1%;
+	margin-left: 1%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.subttitle {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.subttitle2 {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.barlist-result {
+	font-weight: 700;
+	font-size: 20px;
+	margin: 5px;
+}
+
+.white-btn2 {
+	height: 54px;
+	width: 80px;
+	border: 2px solid #1A1A1A;
+	border-radius: 10px;
+	font-size: 15px;
+	font-weight: 600;
+	margin: 0;
+}

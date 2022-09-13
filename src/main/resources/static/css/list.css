@@ -1,0 +1,435 @@
+@charset "UTF-8";
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body {
+	min-width: 1080px;
+	max-width: 1390px;
+	margin: 0 auto;
+}
+
+.tabList {
+	display:flex;
+}
+
+.tabList ul, li {
+	display:inline-block;
+	justify-content: left;
+	min-width: 80px;
+}
+
+/* 유나 */
+
+#searchMainTitle {
+	margin-top : 50px;
+	height : 150px;
+	border-bottom : solid 2px black;
+	font-size : 25px;
+	font-weight : bold;
+}
+
+#searchMainBox{
+	margin-top : 1%;
+	padding-top : 0.8%;
+	height: 60%;
+	line-height : 100%;
+}
+
+#searchTEXT{
+	width : 60%;
+	height: 42px;
+	padding: 4px 16px;
+	border: 2px black solid;
+	border-radius: 10px;
+}
+
+/* #SearchBtn */
+
+#SearchBtn{
+	height: 54px;
+	width : 80px;
+	border: 2px solid #1A1A1A;
+	border-radius: 15px;
+	background-color: #000;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	margin: 0;
+	display: inline-block;
+	position : relative;
+	top : 0.5%;
+}
+
+#SearchBtn:disabled {
+	pointer-events: none;
+}
+#SearchBtn:hover {
+	color: #1a1a1a;
+	background-color: #fff;
+	box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+	transform: translateY(-2px);
+}
+#SearchBtn:active {
+	box-shadow: none;
+	transform: translateY(0);
+}
+
+
+#detailSearchBtn:disabled {
+	pointer-events: none;
+}
+#detailSearchBtn:hover {
+	color: #fff;
+	background-color: #000;
+	box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+	transform: translateY(-2px);
+}
+#detailSearchBtn:active {
+	box-shadow: none;
+	transform: translateY(0);
+}
+
+#searchAreaBox {
+	margin-top : 20px;
+	height : 70px;
+	border-bottom : solid 2px black;
+	font-weight : 400;
+	display: flex;
+	justify-content: center;
+}
+
+/*ExhibitionBOX*/
+#ExhibitionBOX{
+	/* border : solid 2px green; */
+	width : 40%;
+	float:right;
+	text-align : right;
+	height : 85%;
+}
+
+.exhibitionABC{
+	margin-left :20px;
+	background-color: #fff;
+	height : 85%;
+	width : 100px;
+	border: 2px solid #1A1A1A;
+	border-radius: 15px;
+	color: #3B3B3B;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 600;
+	position : relative;
+	bottom : 2%;
+}
+
+.exhibitionABC:disabled {
+	pointer-events: none;
+}
+.exhibitionABC:hover {
+	color: #fff;
+	background-color: #000;
+	box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+	transform: translateY(-2px);
+}
+.exhibitionABC:active {
+	box-shadow: none;
+	transform: translateY(0);
+}
+
+/*searchArea*/
+#searchArea{
+	width : 100%;
+	text-align : center;
+	height : 85%;
+	display: flex;
+	justify-content: space-around;
+	font-size : 1.2rem;
+}
+
+#searchArea i {
+	margin-right: 5px;
+}
+
+.AREA a{
+	color : #000000;
+}
+.AREA > ul >li {
+	margin-top : 6px;
+}
+
+
+#searchArea .tabTag:hover {
+	background-color: #000;
+	min-width:140px;
+	height: 50px;
+	line-height: 40px;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 6px;
+}
+#searchArea .tabTag:hover a {
+	color: #ffffff;
+}
+
+#searchArea .selected {
+	background-color: #000;
+	width:140px;
+	height: 50px;
+	line-height: 40px;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 6px;
+}
+
+#searchArea .selected a {
+	color: #ffffff;
+}
+
+#searchArea .tabTag {
+	color: #000000;
+	width:140px;
+	height: 50px;
+	line-height: 40px;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 6px;
+}
+
+/*img-box*/
+
+.img-box {
+	text-align : center;
+	margin: 10px auto;
+	width : 90%;
+	height: 300px;
+}
+
+.list-con {
+	display: flex;
+	/*clear: both;*/
+	height: 100%;
+	max-width: 1390px;
+	flex-wrap: wrap;
+}/* float:left 때문에 자식 인식 못함 */
+
+.list-con .row {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.cell{
+	width : 25%;
+	height : 400px;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 10px;
+	padding-bottom: 20px;
+	margin: 20px;
+	border-radius: 10px;
+}
+.cell img {
+	width: 100%;
+	height:100%;
+	text-align : center;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+.cell:hover {
+	box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+	transition: 0.5s ease;
+}
+.cell:hover img {
+	object-fit: contain;
+}
+
+#ex-all{
+	margin-top : 4%;
+	height : 20%;
+}
+
+.ex-place{
+	font-size : 0.9rem;
+	color: #3B3B3B;
+	text-align: center;
+}
+
+.ex-title{
+	display: flex;
+	font-size : 1.0rem;
+	line-height : 1.3rem;
+	height: 40px;
+	overflow: hidden;
+	font-weight: bold;
+	padding: 4px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.ex-period{
+	font-size : 0.9rem;
+	color : #808080;
+	text-align: center;
+}
+
+.white-btn{
+	height: 59px;
+	width: 100px;
+	border: 2px solid #1A1A1A;
+	border-radius: 10px;
+	font-size: 15px;
+	font-weight: 600;
+	margin: 0;
+	
+	display: inline-block;
+	margin-left : 10px;
+	margin-top : 12px;
+	
+
+}
+.background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: auto;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 1000;
+	/* 숨기기 */
+	z-index: -1;
+	opacity: 0;
+}
+
+
+.show {
+	opacity: 1;
+	z-index: 1000;
+	transition: all 0.5s;
+}
+
+.window {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.hi {
+	margin-botton : 10px;
+}
+#container-deatil-search {
+	width: 1080px;
+	/*border-color: ;*/
+	/*border-width: ;*/
+	/*border-style: ;*/
+	padding: 20px;
+}
+.exsearchcontainer1{
+	heigh : 100vh;
+	display : flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	margin-right:auto;
+}
+
+
+
+.exsearchcontainer3{
+	heigh : 100vh;
+	display : flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: baseline;
+	align-items: flex-end;
+
+
+}
+
+#exfarite{
+	margin: auto;
+}
+.background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 1000;
+	/* 숨기기 */
+	z-index: -1;
+	opacity: 0;
+}
+.show {
+	opacity: 1;
+	z-index: 1000;
+	transition: all 0.5s;
+}
+
+.window {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.toggleSwitch {
+	width: 3rem;
+	height: 1.5rem;
+	display: block;
+	position: relative;
+	border-radius: 2rem;
+	background-color: #fff;
+	box-shadow: 0 0 1rem 3px rgba(0 0 0/ 15%);
+	cursor: pointer;
+}
+
+/* 토글 버튼 */
+.toggleSwitch .toggleButton {
+	/* 버튼은 토글보다 작아야함  */
+	width: 1rem;
+	height: 1rem;
+	position: absolute;
+	top: 50%;
+	left: .2rem;
+	transform: translateY(-50%);
+	border-radius: 50%;
+	background: #f03d3d;
+}
+
+ul.tabs{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+ul.tabs li{
+	background: none;
+	color: #222;
+	display: inline-block;
+/* 	padding: 10px 15px;
+ */	cursor: pointer;
+}
+
+ul.tabs li.current{
+	background: #eeeeee;
+	color: #222;
+}
+/*  탭 누르면 탭 모양 변하는거 유나님 미안해요 ㅜ */
+/* 탭 컨텐츠 지우면 다시 돌아감 jsp에 selected도 지워야함*/
+
+.tab-content{
+	display: none;
+	background: #ededed;
+	padding: 15px;
+}
+
+.tab-content.current{
+	display: inherit;
+}

@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+#recommended{
+	height: 900px;
+	background-color: #eeeeee;
+}
+
+#recommended > div {
+	float:left;
+	list-style: none;
+}
+
+#recommended div > ul > li > img {
+	width: 100%;
+	height: 900px;
+}
+
+#recommended1{
+	width:33.3%;
+	height: 50%;
+
+}
+
+#recommended2{
+	width:33.3%;
+	height: 900px;
+
+}
+
+#recommended3{
+	width:33.3%;
+	height: 900px;
+
+}
+
+list-style: none;
+
+#recommended1 > ul > li {list-style: none;}
+
+#recommended2 > ul > li {list-style: none;}
+
+#recommended3 > ul > li {list-style: none;}
+
+/** description **/
+#description1 > ul {
+	position : absolute; 
+	top : 92%;
+	left : 3%;
+	color : #fff;
+	font-size : 20px;
+	font-weight : bold;
+}
+
+#description1 > ul > li {
+	list-style: none;
+}
+
+#description2 > ul {
+	position : absolute; 
+	top : 92%;
+	left : 38%;
+	color : #fff;
+	font-size : 20px;
+	font-weight : bold;
+}
+
+#description2 > ul > li {
+	list-style: none;
+}
+
+#description3 > ul {
+	position : absolute; 
+	top : 92%;
+	left :72%;
+	color : #fff;
+	font-size : 20px;
+	font-weight : bold;
+}
+
+#description3 > ul > li {
+	list-style: none;
+}
+
+#description1 > ul > li > a {
+	font-size : 16px;
+	color : #fff;
+	font-weight : bold;
+}
+
+#description2 > ul > li > a {
+	font-size : 16px;
+	color : #fff;
+	font-weight : bold;
+}
+
+.description > ul > li > a {
+	font-size : 16px;
+	color : #fff;
+	font-weight : bold;
+}
+
+.description > ul > li {
+	margin: 8px 0;
+}
+
+.Exhibiiton-Name > a{
+	font-size : 20px;
+	font-weight : bold;
+}

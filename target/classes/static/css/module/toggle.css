@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/*
+<input type="checkbox" id="toggle" hidden>
+<label for="toggle" class="toggleSwitch">
+  <span class="toggleButton"></span>
+</label>
+*/
+
+
+.toggleSwitch {
+  width: 4rem;
+  height: 2rem;
+  display: inline-block;
+  position: relative;
+  border-radius: 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 1rem 3px rgba(0 0 0 / 5%);
+  cursor: pointer;
+}
+
+.toggleSwitch .toggleButton {
+  width: 1.8rem;
+  height: 1.8rem;
+  position: absolute;
+  top: 50%;
+  left: .2rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: #000;
+
+}
+
+/* 체크박스가 체크되면 변경 이벤트 */
+.toggle:checked ~ .toggleSwitch {
+  background: #000;
+}
+
+.toggle:checked ~ .toggleSwitch .toggleButton {
+  left: calc(100% - 1.9rem);
+  background: #fff;
+}
+
+.toggleSwitch, .toggleButton {
+  transition: all 0.2s ease-in;
+}
+
+#toggleBox{
+	margin-top: 0;
+}
+
+#toggleText {
+  font-size : 1.2rem;
+  font-weight : bold;
+}

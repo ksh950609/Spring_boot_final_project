@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring_boot_final.project.dao.ICourseDAO">
+
+    <!-- read -->
+    <select id="selectCourse" resultType="com.spring_boot_final.project.model.CourseVO">
+    <![CDATA[
+        select * from course
+            inner join exhbn on course.exhbnId = exhbn.exhbnId
+            inner join user on course.userId = user.userId
+        WHERE courseState != "DELETE"
+        ORDER BY courseId DESC;
+        ]]>
+    </select>
+
+    <select id="selectCoursePost" parameterType="int" resultType="com.spring_boot_final.project.model.CourseVO">
+        <![CDATA[
+        select * from course
+            inner join exhbn on course.exhbnId = exhbn.exhbnId
+            inner join user on course.userId = user.userId
+        WHERE courseId=${courseId};
+        ]]>
+    </select>
+
+    <!-- 코스 수정  -->
+    <update id="updateCourse" parameterType="com.spring_boot_final.project.model.CourseVO">
+        <![CDATA[
+        UPDATE course
+        SET exhbnId=#{exhbnId},
+            courseTitle=#{courseTitle},
+            courseTag=#{courseTag},
+            courseState=#{courseState},
+            courseSitesArr=#{courseSitesArr},
+            courseAddressArr=#{courseAddressArr},
+            courseMemoArr=#{courseMemoArr}
+        WHERE courseId = #{courseId} AND userId = #{userId}
+        ]]>
+    </update>
+
+    <!-- 새 코스 작성 -->
+    <insert id="insertCourse" parameterType="com.spring_boot_final.project.model.CourseVO">
+        <![CDATA[
+        INSERT INTO course
+            (userId, exhbnId, courseTitle, courseTag, courseState,
+             -- CourseListItemVO
+             placeNames, categoryNames, phones, addressNames, roadAddressNames,
+             postionX, positionY, placeUrls, placeMemos)
+        VALUES (#{userId}, #{exhbnId}, #{courseTitle}, #{courseTag}, #{courseState},
+                -- CourseListItemVO
+                #{placeNames}, #{categoryNames}, #{phones}, #{addressNames}, #{roadAddressNames},
+                #{postionX}, #{positionY}, #{placeUrls}, #{placeMemos});
+        ]]>
+    </insert>
+
+    <!--  POST:정상 DELETE:삭제 BLOCK:차단 -->
+    <!--  코스 삭제  -->
+    <update id="deleteCourse" parameterType="hashmap">
+        <![CDATA[
+        UPDATE course
+        SET courseState = "DELETE"
+        WHERE courseId = #{courseId} AND userId = #{userId};
+        ]]>
+    </update>
+
+    <!--  조회수  -->
+    <update id="hitCourse" parameterType="int">
+        UPDATE course SET
+            courseView = courseView+1
+        WHERE courseId = #{courseId}
+    </update>
+
+<!--  코멘트  -->
+    <insert id="insertComment" parameterType="com.spring_boot_final.project.model.CourseCommentVO">
+        <![CDATA[
+        INSERT INTO courseComment (courseId, userId, comment)
+        VALUES (#{courseId}, #{userId}, #{comment})
+        ]]>
+    </insert>
+
+    <!--  조회수  -->
+    <update id="countComment" parameterType="int">
+    <![CDATA[
+        UPDATE course SET
+            courseComment = courseComment+1
+        WHERE courseId = #{courseId}
+    ]]>
+    </update>
+
+    <select id="selectCourseComment" parameterType="int" resultType="com.spring_boot_final.project.model.CourseCommentVO">
+    <![CDATA[
+        select * from courseComment
+            inner join user on courseComment.userId = user.userId
+        WHERE courseId=${courseId}
+        ORDER BY commentId DESC;
+    ]]>
+    </select>
+
+<!--  마이페이지  -->
+    <!-- 마이페이지 코스 작성글 조회 -->
+    <select id="mpCoursePostSelect" parameterType="string" resultType="com.spring_boot_final.project.model.CourseVO">
+        <![CDATA[
+        select *
+        from course
+        WHERE userId=#{userId}
+        ]]>
+    </select>
+
+	<!-- 마이페이지 코스 작성글 삭제 -->
+	<delete id="deleteMpCourse" parameterType="int">
+        <![CDATA[
+        delete
+        from course
+        where courseId = #{courseId} 
+        ]]>
+    </delete>
+
+</mapper>

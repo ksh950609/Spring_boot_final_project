@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+
+/*banner*/
+
+
+
+.bannerText{
+  	align-items:center;
+}
+
+/*bannerText1*/
+
+
+#bannerText1 > ul > li {
+	text-align : center;
+	list-style: none;
+	font-size : 12px;
+	color : #fff;
+	position : absolute;
+	top : 12.2%;
+	left: 0%;
+	width : 100%;
+}
+
+/*bannerText2*/
+
+/* #bannerText2{
+	position : absolute;
+	top : 14%;
+	left: 42.5%;
+}
+ */
+#bannerText2 > ul > li {
+	text-align : center;
+	list-style: none;
+	font-size : 40px;
+	color : #fff;
+	font-weight : bold;
+	position : absolute;
+	top : 13.8%;
+	left : 0%;
+	width : 100%;
+	
+	display: flex;
+ 	justify-content: center;
+}
+
+/*bannerText3*/
+
+#bannerText3{
+	width : 100%;
+	height : 150px;
+	position : absolute;
+	top : 735px;
+	left: 0;
+	display: flex;
+ 	justify-content: center;
+}
+
+#bannerText3 > ul{
+	width : 250px;
+}
+
+#bannerText3 > ul > li {
+	text-align : center;
+	list-style: none;
+	font-size : 2.5rem;
+	background-color : #000;
+	font-weight : bold;
+	color : #fff;
+	text-decoration : none;
+	font-weight : bold;
+	border : solid 0.1px rgba(255,255,255,0.7);
+	border-radius: 70px;
+	line-height: 4rem;
+	width : 100%;
+	margin-top : 15px;
+	height: 60px;
+}
+
+ #bannerText3 > ul > li{
+      outline: 0;
+      grid-gap: 8px;
+      align-items: center;
+      background: black;
+      border: 1px solid #fff;
+      /* border-radius: 4px; */
+      cursor: pointer;
+      display: inline-flex;
+      flex-shrink: 0;
+      font-size: 16px;
+      gap: 8px;
+      justify-content: center;
+      line-height: 1.5;
+      overflow: hidden;
+      text-decoration: none;
+      text-overflow: ellipsis;
+      transition: all .14s ease-out;
+      white-space: nowrap;
+      
+      padding-top: 12px;
+      padding-bottom: 12px;
+      }
+      
+ #bannerText3 > ul > li:hover {
+    box-shadow: 4px 4px 0 #000;
+    transform: translate(-4px,-4px);
+}
+                     
+ #bannerText3 > ul > li:focus-visible{
+    outline-offset: 1px;
+}
+                       
+
+#bannerText3 > ul > li > a {
+	color : #fff;
+	text-decoration : none;
+	font-weight : bold;
+}
+
+
+#bannerText3 > ul > li:hover {
+	color : black;
+	background-color:#fff;
+} 
+
+#bannerText3 > ul > li:hover a {
+	color : black;
+}

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring_boot_final.project.dao.IExhbnDAO">
+
+    <!-- Create -->
+
+    <insert id="insertExhbn" parameterType="com.spring_boot_final.project.model.ExhbnVO">
+        <![CDATA[
+        INSERT INTO exhbn (exhbnId, exhbnTitle, exhbnStartDate, exhbnEndDate, exhbnPlace, exhbnArea, exhbnPrice,
+                           exhbnUrl, exhbnPhone, exhbnImgUrl, gpsX, gpsY, exhbnPlaceUrl, exhbnPlaceAddr)
+        VALUES (#{exhbnId}, #{exhbnTitle}, #{exhbnStartDate}, #{exhbnEndDate}, #{exhbnPlace}, #{exhbnArea},
+                #{exhbnPrice}, #{exhbnUrl}, #{exhbnPhone}, #{exhbnImgUrl}, #{gpsX}, #{gpsY}, #{exhbnPlaceUrl},
+                #{exhbnPlaceAddr})
+        ]]>
+    </insert>
+
+
+    <!-- Read -->
+
+    <select id="selectAllExhbn" resultType="com.spring_boot_final.project.model.ExhbnVO">
+        <![CDATA[
+        SELECT *
+        FROM exhbn
+        WHERE exhbnPrice1 = 0
+        ORDER BY exhbnId DESC limit 9
+        ]]>
+    </select>
+
+    <select id="selectExhbn" parameterType="int" resultType="com.spring_boot_final.project.model.ExhbnVO">
+        <![CDATA[
+        SELECT *
+        FROM exhbn
+        WHERE exhbnId = #{exhbnId}
+        ]]>
+    </select>
+
+    <select id="existExhbn" parameterType="int" resultType="int">
+        <![CDATA[
+        SELECT COUNT(*)
+        FROM exhbn
+        where exhbnId = #{exhbnId}
+        ]]>
+    </select>
+
+    <!-- Update -->
+
+    <update id="updateExhbn" parameterType="com.spring_boot_final.project.model.ExhbnVO">
+        <![CDATA[
+        UPDATE exhbn
+        SET exhbnTitle         = #{exhbnTitle},
+            exhbnImgUrl        = #{exhbnImgUrl},
+            exhbnUrl           = #{exhbnUrl},
+            exhbnPlaceUrl      = #{exhbnPlaceUrl},
+            exhbnArea          = #{exhbnArea},
+            exhbnPlace         = #{exhbnPlace},
+            exhbnPlaceAddr     = #{exhbnPlaceAddr},
+            exhbnStartDate     = #{exhbnStartDate},
+            exhbnEndDate       = #{exhbnEndDate},
+            exhbnPrice         = #{exhbnPrice},
+            exhbnPrice1        = #{exhbnPrice1},
+            exhbnContent       = #{exhbnContent},
+            exhbnPhone         = #{exhbnPhone},
+            exhbnWriter        = #{exhbnWriter},
+            exhbnHostOrganizer = #{exhbnHostOrganizer},
+            exhbnNum           = #{exhbnNum},
+            gpsX               = #{gpsX},
+            gpsY               = #{gpsY},
+            viewState          = #{viewState}
+        WHERE exhbnId = #{exhbnId}
+        ]]>
+    </update>
+
+    <!-- Delete -->
+    <update id="deleteExhbn" parameterType="integer">
+        <![CDATA[
+        UPDATE exhbn
+        SET viewState = 'DELETE'
+        WHERE exhbnId = #{exhbnId}
+        ]]>
+    </update>
+ 	<!-- Search -->
+	<select id="ExhbnSearch" parameterType="string" resultType="com.spring_boot_final.project.model.ExhbnVO">
+	select exhbnID,
+	exhbnTitle,
+	exhbnPlace,
+	exhbnArea,
+	exhbnImgUrl,
+	exhbnStartDate,
+	exhbnEndDate,
+	exhbnUrl,
+	exhbnPrice
+	From exhbn
+	where
+	exhbnTitle like CONCAT('%',#{title},'%')
+	</select>
+	
+	<select id="tab_ExhbnSearch" parameterType="String" resultType="com.spring_boot_final.project.model.ExhbnVO">
+	select
+	exhbnID,
+	exhbnTitle,
+	exhbnPlace,
+	exhbnArea,
+	exhbnImgUrl,
+	exhbnStartDate,
+	exhbnEndDate,
+	exhbnUrl,
+	exhbnPrice
+	From exhbn
+	WHERE exhbnType = "박물관" 
+	 ORDER BY exhbnId DESC limit 9
+	</select>
+	
+		<select id="tab_ExhbnSearch2" parameterType="String" resultType="com.spring_boot_final.project.model.ExhbnVO">
+	select
+	exhbnID,
+	exhbnTitle,
+	exhbnPlace,
+	exhbnArea,
+	exhbnImgUrl,
+	exhbnStartDate,
+	exhbnEndDate,
+	exhbnUrl,
+	exhbnPrice
+	From exhbn
+	WHERE exhbnType = "미술전시" 
+	 ORDER BY exhbnId DESC limit 9
+	</select>
+	
+		<select id="tab_ExhbnSearch3" parameterType="String" resultType="com.spring_boot_final.project.model.ExhbnVO">
+	select
+	exhbnID,
+	exhbnTitle,
+	exhbnPlace,
+	exhbnArea,
+	exhbnImgUrl,
+	exhbnStartDate,
+	exhbnEndDate,
+	exhbnUrl,
+	exhbnPrice
+	From exhbn
+	WHERE exhbnType = "축제" 
+	 ORDER BY exhbnId DESC limit 9
+	</select>
+
+		<select id="tab_ExhbnSearch4" parameterType="String" resultType="com.spring_boot_final.project.model.ExhbnVO">
+	select
+	exhbnID,
+	exhbnTitle,
+	exhbnPlace,
+	exhbnArea,
+	exhbnImgUrl,
+	exhbnStartDate,
+	exhbnEndDate,
+	exhbnUrl,
+	exhbnPrice
+	From exhbn
+	WHERE exhbnType = "교육" 
+	 ORDER BY exhbnId DESC limit 9
+	</select>
+	
+	
+	<select id="tab_ExhbnSearch5" parameterType="String" resultType="com.spring_boot_final.project.model.ExhbnVO">
+	select
+	exhbnID,
+	exhbnTitle,
+	exhbnPlace,
+	exhbnArea,
+	exhbnImgUrl,
+	exhbnStartDate,
+	exhbnEndDate,
+	exhbnUrl,
+	exhbnPrice
+	From exhbn
+	WHERE exhbnType = "기타" 
+	 ORDER BY exhbnId DESC limit 9
+	</select>
+
+	
+	<select id="tab_ExhbnSearch6" parameterType="String" resultType="com.spring_boot_final.project.model.ExhbnVO">
+	select
+	exhbnID,
+	exhbnTitle,
+	exhbnPlace,
+	exhbnArea,
+	exhbnImgUrl,
+	exhbnStartDate,
+	exhbnEndDate,
+	exhbnUrl,
+	exhbnPrice
+	From exhbn 
+		WHERE exhbnType = "기타" 
+	
+	 ORDER BY exhbnId DESC limit 9
+	</select>
+
+</mapper>

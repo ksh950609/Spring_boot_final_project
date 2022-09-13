@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'establishRetrosansOTF';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRetrosansOTF.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* 모든 컨텐츠를 포함하는 box */
+#wrap {
+	/* width:1910px; */
+	background-color:#ffffff;
+	position:relative;
+}
+
+/* mainMenu */
+
+#mainMenuBox{
+	width: 100%;
+	height : 70px;
+	position:absolute;
+	position: fixed;
+}
+
+#mainMenu {
+	width: 100%;
+	height : 70px;
+	position:absolute;
+	top : 0;
+	left : 50%;
+	transform: translate(-50%, 0%);
+	
+	max-width : 1390px;
+	margin: 0;
+	min-width : 1080px;
+}
+
+
+/*header*/
+header{
+	background-color:#eeeeee;
+	padding : 0px;
+}
+
+header #visual img{
+	width:100%;
+	height: 940px;
+}
+
+
+/*logoBox*/
+	
+header #logoBox { 
+	float : left;
+}
+	
+header #logoBox{
+	width: 10%;
+	line-height: 70px; 
+	height:70px;
+	z-index : 300;
+}
+
+header #logoBox > a {
+	font-size : 25px;
+	color : #fff;
+	text-decoration : none;
+	font-family: 'establishRetrosansOTF';
+}
+
+/*loginBox*/
+
+	
+header #loginBox > ul{
+	display : flex;
+	height:70px;
+	list-style: none;
+	
+}
+
+header #afterLogin {
+	margin-left: 75%;
+	width:25%;
+}
+
+header #beforeLogin{
+	margin-left: 80%;
+	width:20%;
+}
+
+header #loginBox > ul li{
+	flex:1;
+	line-height:75px; 
+	height:70px;
+	text-align:center;
+	display: inline-block;
+
+}
+
+header #loginBox > ul li a {
+	width:100%;
+	font-size : 16px;
+	color : #fff;
+	text-decoration : none;
+}
+
+.mainSearch {
+	height : 100%;
+	margin-top : 6px;
+}
+
+.userName{
+	white-space: nowrap; 	/* 아래줄로 내려가는걸 막음 */
+	text-overflow: ellipsis;  /*... 만들기 */
+	overflow: hidden;  		/* 영역을 감춤 */
+	color : #fff;
+	font-weight : bold;
+}
+
+/*headerBox*/
+
+header #headerBox {
+	float : left;
+	justify-content: space-between;
+	box-sizing : border-box;
+}
+
+header #headerBox nav > ul > li > a {
+	font-size : 16px;
+	color : #fff;
+	text-decoration : none;
+	height: 70px;
+	line-height:75px;
+	padding : 0 20px;
+}
+
+
+header #headerBox nav > ul {
+	text-align:center;
+	display: flex;
+}
+
+header #headerBox nav > ul > li {
+	display: inline-block;
+}
+
+#headerBox i {
+	margin-left: 10px;
+}
+
+.dropdownMenu {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	z-index: 500;
+}
+.dropdownMenu>li {
+	padding: 10px 15px;
+	text-align: left;
+}
+.dropdownMenu>li:hover {
+	background-color: black;
+}
+.dropdownMenu>li:hover a {
+	color: white;
+}
+	
+
+/*** 메인 메뉴 고정 ***/
+/* 윈도우 스크롤시 메인메뉴 고정 */
+.mainMenuFixed{
+  	position: fixed;
+ 	top: 0;
+	left: 0;
+	right: 0;
+}
+
+/* 메인메뉴 색상 변경 */
+.mainMenuChange{
+	color: black;
+}
+
+/* 메인 메뉴 맨 앞으로 */
+ #mainMenuBox {
+	z-index : 500;
+}
+
+.boxshadow{
+	box-shadow:0 3px 0px 0px rgba(0, 0, 0, 0.05);}
+	/* offset-x | offset-y | blur-radius | spread-radius | color */
+
+
+/* 검색 버튼 눌러도 스크롤 현재 위치 */
+

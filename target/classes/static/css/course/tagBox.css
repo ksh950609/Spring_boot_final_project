@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+/* View */
+
+.tag-box :where(li, li i) {
+    display: flex;
+    align-items: center;
+}
+
+.tag-box ul {
+    display: flex;
+    border: 2px black solid;
+    height: 47px;
+    padding: 4px;
+    border-radius: 10px;
+    margin: 12px 0;
+}
+
+.tag-box ul li {
+    font-size: 0.8rem;
+    color: white;
+    font-weight: 300;
+    list-style: none;
+    margin: 4px 3px;
+    border-radius: 20px;
+    background: #000000;
+    padding: 2px 8px 2px 16px;
+}
+
+.tag-box ul i {
+    margin: 3px;
+    margin-left: 8px;
+    height: 20px;
+    width: 25px;
+    border-radius: 50%;
+    background: #ffffff;
+    justify-content: center;
+    font-size: 12px;
+    color: #000000;
+    opacity: 0.7;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.tag-box ul input {
+    flex:  1;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size:1.0rem;
+    background-color: transparent;
+}
+
+.searchbar-btn {
+    min-width: 150px;
+    margin-top: 12px;
+    margin-left: 10px;
+    height: 59px;
+    align-self: auto;
+}
+
+#tag-caution {
+    font-size: 0.9rem;
+    color: red;
+    padding: 0 10px;
+    margin-bottom: 30px;
+    visibility: hidden;
+}
+
+#tag-caution .vibration {
+    animation: vibration .1s infinite;
+}
+
+/* Edit */
+
+.tag-box-edit :where(li, li i) {
+    display: flex;
+    align-items: center;
+}
+
+.tag-box-edit ul {
+    display: flex;
+    padding: 4px;
+    margin: 5px 0;
+}
+.tag-box-edit input {
+    border: none;
+    resize: none;
+}
+.tag-box-edit input:focus {
+    border-bottom: dotted 2px #000000;
+    outline-color: mediumspringgreen;
+}
+
+.tag-box-edit ul li {
+    font-size: 0.8rem;
+    color: white;
+    font-weight: 300;
+    list-style: none;
+    margin: 4px 3px;
+    border-radius: 20px;
+    background: #000000;
+    padding: 4px 8px 4px 16px;
+    border-bottom: 1px black solid;
+}
+
+.tag-box-edit ul i {
+    margin: 3px;
+    margin-left: 8px;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: #ffffff;
+    justify-content: center;
+    font-size: 12px;
+    color: #000000;
+    opacity: 0.7;
+    text-align: center;
+    padding-top: 2px;
+}
+
+.tag-box-edit ul input {
+    flex:  1;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size:1.0rem;
+    background-color: transparent;
+}
+
+.searchbar-btn {
+    min-width: 150px;
+    margin-top: 12px;
+    margin-left: 10px;
+    height: 59px;
+    align-self: auto;
+}
+
+#tag-caution {
+    font-size: 0.9rem;
+    color: red;
+    padding: 0 10px;
+    margin-bottom: 30px;
+    visibility: hidden;
+}
+
+#tag-caution .vibration {
+    animation: vibration .1s infinite;
+}

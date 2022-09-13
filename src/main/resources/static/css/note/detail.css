@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width:1080px;
+    padding-bottom: 30%;
+}
+
+.fa-solid {
+    padding-right: 5px;
+}
+
+.filter_box {
+    display: flex;
+    padding-top: 20px;
+    margin-bottom: 15px;
+}
+
+.back {
+    margin:auto;
+}
+
+.write_box {
+    margin-left: 80%;
+}
+
+.write_btn {
+    width: 110px; height: 40px;
+    background: #1c1c1c;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.write_btn:hover {
+    background: #5b5b5b;
+}
+
+.list_box {
+    display: block;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.scrap {
+    width: 10%;
+    text-align: center;
+}
+
+.summary {
+    width: 90%;
+    text-align: left;
+}
+
+.like {
+    padding-bottom: 5px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.title a {
+    color: black;
+    text-decoration: none;
+}
+
+.title a:hover {
+    text-decoration: underline;
+}
+
+.content-body {
+    color: black;
+    padding-bottom: 10px;
+}
+
+.infoBox {
+	 display: flex;
+	 justify-content:space-between;
+	 align-items: center;
+}
+
+.info {
+    margin-bottom: 20px;
+    
+}
+
+.comment-write{
+    margin-top:20px;
+}
+
+.comment-write input{
+    margin-top:10px;
+    width: 110px;
+    height: 40px;
+    background: #1c1c1c;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post:hover {
+    background: #5b5b5b;
+}
+
+textarea {
+    font-size: .8rem;
+    letter-spacing: 1px;
+    padding: 10px;
+    width: 98%;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+
+.comment-num {
+    margin-top:20px;
+}
+
+.comment {
+    display: flex;
+    margin-top:20px;
+    margin-bottom:20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 98%;
+}
+
+.comment-scrap {
+    width: 7%;
+    text-align: center;
+}
+
+.comment-summary {
+    width: 93%;
+    text-align: left;
+}
+
+.fa-heart {
+    cursor: pointer;
+}
+
+#back:hover {
+    color: #5b5b5b;
+    cursor: pointer;
+}
+
+.deleteBtn {
+	margin-right:20px;
+}

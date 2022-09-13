@@ -1,0 +1,371 @@
+@charset "UTF-8";
+
+/* myPageCustom.css */
+
+@font-face {
+	font-family: 'establishRetrosansOTF';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRetrosansOTF.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.logo {
+    font-family: 'establishRetrosansOTF';
+    font-size: 40px;
+    color: #000;
+    text-decoration: none;
+}
+
+/* 전체 틀 */
+.wrapper {
+	/*  푸터 하단 고정 */
+	padding-bottom: 25%;
+	max-width : 1390px;
+	margin: 0 auto;
+	min-width : 1080px;
+}
+
+#course-container {
+    width:100%;
+    min-width: 1080px;
+    min-height: auto;
+    background-color: rgba(255,255,255,1);
+    --web-view-name: coursepage;
+    --web-view-id: coursepage;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+    position: relative;
+}
+
+.course-box {
+    margin-top: 50px;
+    line-height: 2.3rem;
+    border-bottom: black 2px solid;
+    padding: 20px 0;
+    display:flex;
+}
+
+
+.course-box>nav {
+	display:flex;
+	width:30%;
+
+}
+
+/* 탭 메뉴 */
+.tabMenu {
+	width:100%;
+	border-right:2px solid #aaa;
+}
+
+.tabMenu li {
+	margin-top:15%;
+}
+
+.tabMenu li:first-child {
+	margin:0;
+} 
+
+.tabMenu li a {
+	color:#949494;
+	font-size:20px;
+}
+
+
+.tabMenu li:nth-child(2) a, .tabMenu li a:hover {
+	color:#000;
+	font-weight:bold;
+}
+
+.titleBox a {
+	font-weight:bold;
+	font-size:20px;
+	margin-left:3%;
+	color:#949494;
+	
+}
+
+/* 개인정보 수정 */
+.titleBox {
+	margin-top:3%;
+}
+
+.titleBox a:last-child {
+	color:#000;
+}
+
+.titleBox a:hover {
+	color:#000;
+	font-weight:bold;
+}
+
+.myPageBox {
+	width:100%;
+	height:auto;
+	min-height:100%;
+	margin-left:2%;
+}
+
+/* 기본 정보, 맞춤 정보 */
+.myPageBox h2 {
+	font-size:28px;
+	color:#000;
+	margin-bottom:2%;
+}
+
+/* 선 */
+.line {
+	border:1px solid #000;
+}
+
+/* 테이블 */
+ .tableBox {
+ 	width:100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+ 	margin-top:3%;
+ }
+ 
+ /* 정보 */
+ .infoBox {
+ 	display:flex;
+ 	width:100%;
+ 	align-items:center;
+ 	vertical-align:middle;
+ 	text-align:center;
+ }
+ 
+ .ment {
+ 	margin-top:1%;
+ }
+.warning {
+	padding: 10px 5px;
+    line-height: 14px;
+    font-size: 13px;
+    color: #ef3e42;
+}
+/* 항목 */
+.itemsBox {
+	display:flex;
+	width:20%;
+	text-align:center;
+}
+
+ .itemsBox>span {
+ 	font-weight:bold;
+	padding:20% 15%;
+	height:auto;
+	line-height:auto;
+	text-align:left;
+	width:100%;	
+	color:#aaa;
+ }
+
+ .itemsBox>span:hover {
+ 	color:#000;
+ }
+
+/* 버튼 */
+.buttonBox {
+	margin:0 auto;
+	text-align:center;
+	margin-top:10%;
+}
+
+.white-btn, .black-btn {
+	width:200px;
+	font-size:15px;
+	margin-left:5%;
+}
+
+/* 수정 버튼 */
+.edit {
+	width:8%;
+}
+
+
+.buttonBox {
+	margin:0 auto;
+	text-align:center;
+	margin-top:5%;
+}
+
+.prvBtn, .nextBtn{
+	width:200px;
+	border:none;
+	color:#fff;
+	background:#000;
+	border-radius:30px;
+	padding:0.8% 0;
+	font-size:15px;
+	height:auto;
+	line-height:auto;
+	margin:3% 0;
+}
+
+.nextBtn {
+	margin-left:2%;
+}
+
+.prvBtn {
+	color:#aaa;
+	border:1px solid #000;
+	background:#fff;
+}
+
+.prvBtn:hover {
+	color:#fff;
+	background:#000;
+}
+.nextBtn:hover {
+	color:#000;
+	background:#fff;
+	border:1px solid #000;
+}
+
+.interestMent {
+	font-size:20px;
+	font-color:#000;
+	font-weight:bold;
+	margin-top:4%;
+	margin-left:35%;
+	display:flex;
+}
+
+
+.intetestBox {
+	display:flex;
+	width:100%;
+	margin:5% 0;
+}
+
+input[type=checkbox].css-checkbox{ 
+	display: none;
+	
+}
+
+.css-label {
+    display:flex;
+    justify-content:space-between;
+  	background-color: #949494;
+    align-items:center;
+    word-break:break-all;
+   	font-size:15px;
+    height:50px;
+    margin-right:5%;
+}
+
+.css-label span {
+	  color:#fff;
+	  width:100px;
+	  text-align:center;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+	color:#fff;
+	background:#000;
+}
+
+
+/*form styles*/
+#msform {
+	width: 80%;
+	margin: 0 auto;
+	margin-top:3%;
+	text-align: center;
+	position: relative;
+	min-height:100%;
+	height:500px;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 100px;
+	box-sizing: border-box;
+	width: 100%;
+	
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+	width: 100px;
+	background: #000;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #000;
+}
+
+/*progressbar*/
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: #fff;
+	text-transform: uppercase;
+	width: 33.33%;
+	float: left;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 40px;
+	line-height: 40px;
+	display: block;
+	font-size: 16px;
+	color: #333;
+	background: #fff;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: #aaa;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #000;
+	color: #fff;
+}

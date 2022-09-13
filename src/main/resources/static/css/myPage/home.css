@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/* myPageHome.css */
+
+@font-face {
+	font-family: 'establishRetrosansOTF';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRetrosansOTF.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.logo {
+    font-family: 'establishRetrosansOTF';
+    font-size: 40px;
+    color: #000;
+    text-decoration: none;
+}
+
+/* 전체 틀 */
+.wrapper {
+	/*  푸터 하단 고정 */
+	padding-bottom: 25%;
+	max-width : 1390px;
+	margin: 0 auto;
+	min-width : 1080px;
+}
+
+#course-container {
+    width:100%;
+    min-width: 1080px;
+    min-height: auto;
+    background-color: rgba(255,255,255,1);
+    --web-view-name: coursepage;
+    --web-view-id: coursepage;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+    position: relative;
+}
+
+.course-box {
+   	margin-top: 50px;
+    line-height: 2.3rem;
+    border-bottom: black 2px solid;
+    padding: 20px 0;
+}
+
+/* 가이드 박스 */
+.guide-contents {
+    width:15%;
+    height:15%;
+    text-align: center;
+    margin:20px;
+    margin-bottom: 70px;
+}
+
+.guide-contents>a>img {
+    width:80px;
+    height:80px;
+    margin: 10px;
+}
+
+.guide-contents img {
+    width:80px;
+    height:80px;
+    margin: 10px;
+}
+
+.guide-img-box {
+    display: flex;
+    justify-content: center;
+}
+.guide-box .h2 {
+    margin-bottom: 15px;
+    text-align: center;
+    margin-bottom:5%;
+}
+
+.guide-box>p.h3 {
+    font-weight: bold;
+}
+.guide-box .small-text {
+    font-size: small;
+    line-height: 1.2rem;
+    color: #3B3B3B;
+    width:100%;
+}
+
+.items:hover {
+	opacity:0.5;
+}
+
+

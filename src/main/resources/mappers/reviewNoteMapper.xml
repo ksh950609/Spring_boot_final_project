@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.spring_boot_final.project.dao.IReviewNoteDAO">
+
+	<!-- 리뷰게시판 목록 출력하기 -->
+	<select id="reviewNoteList" parameterType="int" resultType="com.spring_boot_final.project.model.ReviewNoteVO">
+	
+	SELECT r.reviewNoteId,
+		   r.reviewNoteTitle,
+		   r.reviewNote,
+		   r.reviewNoteLike,
+		   r.reviewNoteCommentNum,
+		   r.reviewNoteCreatedDate,
+		   r.reviewPageViewState,
+		   c.courseId,
+		   c.courseSitesArr,
+		   c.courseAddressArr,
+		   c.courseMemoArr,
+		   c.courseTitle,
+		   c.courseTag,
+		   e.exhbnId,
+		   e.exhbnImgUrl,
+		   u.userNickname,
+		   r.userId
+	FROM reviewNote r, course c, user u, exhbn e
+	WHERE c.courseId = r.courseId and r.userId = u.userId and r.exhbnId = e.exhbnId and r.reviewPageViewState = 'POST'
+	ORDER BY r.courseId
+	
+	</select>
+	
+	<select id="selectReviewNote" parameterType="int" resultType="com.spring_boot_final.project.model.ReviewNoteVO">
+	
+	SELECT r.reviewNoteId,
+		   r.reviewNoteTitle,
+		   r.reviewNote,
+		   r.reviewNoteLike,
+		   r.reviewNoteCommentNum,
+		   r.reviewNoteCreatedDate,
+		   r.reviewPageViewState,
+		   c.courseId,
+		   c.courseSitesArr,
+		   c.courseAddressArr,
+		   c.courseMemoArr,
+		   c.courseTitle,
+		   c.courseTag,
+		   e.exhbnId,
+		   e.exhbnImgUrl,
+		   u.userNickname,
+		   u.userId
+	FROM reviewNote r, course c, user u, exhbn e
+	WHERE r.reviewNoteId = #{reviewNoteId} and  r.courseId = c.courseId and r.userId = u.userId and r.exhbnId = e.exhbnId
+	</select>
+	
+	<!-- 리뷰게시판 글 작성하기 -->
+	<insert id="createReviewNote" parameterType="com.spring_boot_final.project.model.ReviewNoteVO">
+		INSERT INTO reviewNote (reviewNoteTitle, reviewNote, userId, courseId, exhbnId)
+		VALUES (#{reviewNoteTitle}, #{reviewNote}, #{userId}, #{courseId}, #{exhbnId});
+	</insert>
+	
+	<!-- 리뷰게시판 글 수정 -->
+	<update id="updateReviewNote" parameterType="com.spring_boot_final.project.model.ReviewNoteVO">
+		UPDATE reviewNote
+		SET reviewNoteTitle = #{reviewNoteTitle},
+		reviewNote = #{reviewNote}
+		WHERE reviewNoteId = #{reviewNoteId}
+		AND userId = #{userId}
+	</update>
+	
+	<!-- 리뷰게시판 글 삭제 -->
+	<update id="deleteReviewNote" parameterType="com.spring_boot_final.project.model.ReviewNoteVO">
+		UPDATE reviewNote
+		SET reviewPageViewState = 'DELETE'
+		WHERE reviewNoteId = #{reviewNoteId}
+		AND userId = #{userId}
+	</update>
+	
+	
+</mapper>

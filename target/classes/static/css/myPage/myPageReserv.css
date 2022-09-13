@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+/* myPageReserv.css */
+
+/* 전체 틀 */
+.wrapper {
+	margin: 0 auto;
+	width:1080px;
+	/*  푸터 하단 고정 */
+	height:auto;
+	min-height: 100%;
+	padding-bottom: 20%;
+}
+
+section {
+	display:flex;
+	justify-content:space-between;
+	margin-top:10%;
+	
+}
+
+section nav {
+	display:flex;
+	margin-right:10%;
+	width:30%;
+}
+
+
+
+.tabMenu {
+	width:100%;
+}
+
+.tabMenu li {
+	margin-top:10%;
+}
+
+.tabMenu li a {
+	color:#949494;
+	font-size:20px;
+}
+
+.tabMenu li:first-child a {
+	color:#000;
+	text-align: left;
+	font-weight:bold;
+	font-size:24px;
+	letter-spacing: 0px;
+	opacity: 1;
+}
+
+.tabMenu li:last-child a, .tabMenu li a:hover {
+	color:#000;
+	font-weight:bold;
+}
+
+
+.myPageBox {
+	width:100%;
+}
+
+.myPageBox h2 {
+	font-size:40px;
+	color:#000;
+	margin-bottom:2%;
+}
+
+/* 선 */
+.line {
+	border:1px solid #000;
+}
+
+/* 사용자 */
+.userBox {
+	margin:5% 0 3% 0;
+}
+
+/* 사용자 이름 */
+.userBox h2 {
+	font-size:32px;
+	font-weight:bold;
+	text-align:left;
+	margin-bottom:2%;
+}
+
+
+/* 내 전시 */
+.myExhbn {
+	margin:5% 0;
+}
+
+.myExhbn h2 {
+	font-weight:bold;
+	font-size:28px;
+	margin-bottom:3%;
+	
+}
+
+.titleBox {
+	display:flex;
+	justify-content:space-between;
+	margin-bottom:3%;
+}
+
+.more {
+	display:flex;
+}
+
+.more a {
+	font-weight:normal;
+	font-size:15px;
+}
+
+/* 예매내역 확인 / 취소*/
+.titleBox>a {
+	font-weight:bold;
+	font-size:28px;
+	margin-left:3%;
+	color:#949494;
+	
+}
+
+/* default 스크랩  */
+.titleBox a:first-child {
+	color:#000;
+}
+
+.titleBox a:hover {
+	color:#000;
+	font-weight:bold;
+}
+
+.explain {
+	color:#aaa;
+	font-size:15px;
+	font-weight:bold;
+	margin-left:3%;
+}
+
+.explain>span {
+	color:red;
+} 
+
+.reservConfirmBox {
+	border:1px solid #aaa;
+	margin-top:3%;
+	display:flex;
+	justify-content:space-between;
+	background:#eee;
+	padding:3% 5% 2% 5%;
+	align-items:center;
+	width:90%;
+}
+
+.periodSearch {
+	display:flex;
+	width:40%;
+	align-items:center;
+}
+	
+.periodSearch a {
+	margin-left:4%;
+	border:1px solid #000;
+	border-radius:10px;
+	font-color:#aaa;
+	font-size:12px;
+	background:#fff;
+	height:30px;
+	line-height:30px;
+	padding:0 5px;
+	width:100%;
+	text-align:center;
+	vertical-align:middle;
+}
+
+.periodSearch a:hover {
+	color:#fff;
+	border:none;
+	background:red;
+	border-radius:10px;
+	padding:0 5px;
+}
+
+.periodSearch a:first-child {
+	color:#fff;
+	border:none;
+	background:red;
+	border-radius:10px;
+}
+
+
+.comboBox {
+	margin-bottom:2%;
+	text-align:right;
+}
+
+/* 테이블 */
+.tableBox {
+	margin-top:10%;
+}
+
+table {
+	width:100%;
+}
+
+table th {
+	border-top:2px solid #000;
+	border-bottom :2px solid #000;
+	font-weight:bold;
+	background:#F6F6F6;
+	padding:3% 0;
+	height:auto;
+	line-height:auto;
+	text-align:center;	
+}
+
+
+table td {
+	text-align:center;
+	padding:3% 0;
+	items-align:center;
+	border-bottom :2px solid #000;
+}

@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+body {
+    background-color: #fff;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1080px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title h1{
+    font-size: x-large;
+}
+
+.title input {
+    width: 1080px;
+    height: 40px;
+    font-size : 14px;
+	padding-left : 10px;
+}
+
+
+.category {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.category select {
+    width: 1080px;
+    height: 40px;
+    font-size : 14px;
+    padding-left : 10px;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+.summernote-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#summernote {
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    width : 1270px;
+    height : 200px;
+}
+
+.btn-area {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#update {
+    width: 1080px;
+    height: 40px;
+    background: #1c1c1c;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height : 10px;
+}
+
+#update:hover {
+    background: #5b5b5b;
+}
+
+#delete {
+    width: 1080px;
+    height: 40px;
+    background: #fd264f;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height : 10px;
+}
+
+#delete:hover {
+    background: #ff9999;
+}
+
+.filter_box {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.back {
+    width: 800px;
+}
+
+.back i {
+    cursor: pointer;
+}
+
+.back i:hover {
+    cursor: pointer;
+    color: #5b5b5b;
+}
+
+.write-box{
+	margin-bottom : 50px;
+}

@@ -1,0 +1,316 @@
+@charset "UTF-8";
+
+body {
+	min-width: 1080px;
+	max-width: 1390px;
+	margin: 0 auto;
+}
+
+#course-container {
+    width:100%;
+    min-width: 1080px;
+    min-height: auto;
+    --web-view-name: coursepage;
+    --web-view-id: coursepage;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+    position: relative;
+    
+    margin-bottom : 20px;
+}
+
+.course-box {
+   	margin-top : 10px;
+    line-height: 2.3rem;
+    border-bottom: black 2px solid;
+    padding: 20px 0;
+
+}
+
+#course-box{
+	margin-left : 0%;
+   	margin-right : 0%;
+}
+
+/* 가이드 박스 */
+.guide-box {
+    padding: 50px 0 80px 0;
+    margin-bottom: 20px;
+}
+
+.guide-box .guide-contents {
+    width:15%;
+    height:15%;
+    text-align: center;
+    margin:40px 20px;
+}
+
+.guide-box .guide-contents img {
+    width:80px;
+    height:80px;
+    margin: 10px;
+}
+
+.guide-img-box {
+    display: flex;
+    justify-content: center;
+}
+.guide-box h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.guide-box h3 {
+    font-weight: bold;
+}
+.guide-box .small-text {
+    font-size: small;
+    line-height: 1.2rem;
+    color: #3B3B3B;
+}
+
+/* 전시부터 정하기 */
+.recommand-exhb {
+    padding: 50px 0;
+    margin-bottom: 20px;
+}
+
+.title-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.viewmore-box {
+    display: flex;
+    align-items: end;
+    width: fit-content;
+}
+/* 전시리스트 */
+.recommand-exhb .exhbnList-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 30%;
+    margin:20px 0 30px 0 ;
+}
+
+.exhbnEach-box {
+    width: 19%;
+    position: relative;
+    border-radius: 15px;
+}
+
+.exhbnEach-box:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+}
+
+.exhbn-item {
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    display: inline-block;
+}
+.exhbn-poster {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius: 15px;
+}
+.exhbn-poster:hover {
+    object-fit:contain;
+}
+
+.caption-box{
+    width: 90%;
+    font-weight: 600;
+    overflow: hidden;
+    position: absolute;
+    bottom: 5%;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+}
+.caption-box input[type=radio]{
+    visibility: hidden;
+}
+.caption-box input[type=radio]+label{
+    display: inline-block;
+    cursor: pointer;
+    max-height: 50px;
+    max-width: 100%;
+    border: 1px solid #333;
+    border-radius: 50px;
+    line-height: 1.2rem;
+    margin:auto;
+    text-align: center;
+    align-self: end;
+    font-weight: 300;
+    font-size:0.8rem;
+    padding: 8px 15px;
+    background-color: #000000;
+    color: #ffffff;
+}
+.caption-box:hover input[type=radio]+label {
+    background-color: #3B3B3B;
+}
+
+#selected {
+    display: flex;
+    justify-content: center;
+    margin:20px;
+    padding: 10px;
+    margin-bottom:0px;
+    visibility: hidden;
+}
+
+/* search-box */
+.big-text {
+    font-size: 1.4rem;
+    margin: 10px 0px;
+}
+
+.big-text strong {
+    font-weight: 600;
+}
+
+.searchbar-box {
+    display: flex;
+    width:100%;
+    /* height: 70px; */
+}
+
+.searchbar-border {
+    width: 75%;
+    min-width: 300px;
+    height: 80%;
+}
+
+.tag-box :where(li, li i) {
+    display: flex;
+    align-items: center;
+}
+
+.tag-box ul {
+    display: flex;
+    border: 2px black solid;
+    height: 47px;
+    padding: 4px;
+    border-radius: 10px;
+    margin: 12px 0;
+}
+
+.tag-box ul li {
+    font-size: 0.8rem;
+    color: white;
+    font-weight: 300;
+    list-style: none;
+    margin: 4px 3px;
+    border-radius: 20px;
+    background: #000000;
+    padding: 2px 8px 2px 16px;
+}
+
+.tag-box ul i {
+    margin: 3px;
+    margin-left: 8px;
+    height: 20px;
+    width: 25px;
+    border-radius: 50%;
+    background: #ffffff;
+    justify-content: center;
+    font-size: 12px;
+    color: #000000;
+    opacity: 0.7;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.tag-box ul input {
+    flex:  1;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size:1.0rem;
+    background-color: transparent;
+}
+
+.searchbar-btn {
+    min-width: 150px;
+    margin-top: 12px;
+    margin-left: 10px;
+    height: 59px;
+    align-self: auto;
+}
+
+#tag-caution {
+    font-size: 0.9rem;
+    color: red;
+    padding: 0 10px;
+    margin-bottom: 30px;
+    visibility: hidden;
+}
+
+#tag-caution .vibration {
+    animation: vibration .1s infinite;
+}
+
+/* 후기리스트 */
+.courseList-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin:20px 0 30px 0 ;
+}
+
+.course-item {
+    width:300px;
+    height: 300px;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 70%;
+    position: relative;
+}
+.coursepost-thumb {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.coursepost-box {
+    color: #fff;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.coursepost-box:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.coursepost-box span {
+    bottom:40%;
+    position: absolute;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.coursepost-box .like-logo {
+    top:10%;
+    right:5%;
+    text-align: right;
+    width:90%;
+    position: absolute;
+}
+
+.noborder {
+    border: none;
+}
+

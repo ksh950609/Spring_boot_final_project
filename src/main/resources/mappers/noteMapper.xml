@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring_boot_final.project.dao.INoteDAO">
+
+    <!-- Create -->
+
+    <insert id="createNote" parameterType="com.spring_boot_final.project.model.NoteVO">
+        <![CDATA[
+        INSERT INTO note (userId, category, noteTitle, note)
+        VALUES (#{userId}, #{category}, #{noteTitle}, #{note})
+        ]]>
+    </insert>
+
+    <insert id="insertNoteLike" parameterType="com.spring_boot_final.project.model.NoteVO">
+        <![CDATA[
+        INSERT into noteLike(noteId, userId)
+        values (#{noteId}, #{userId});
+        ]]>
+    </insert>
+
+    <!-- Read -->
+
+    <select id="selectNote" parameterType="int" resultType="com.spring_boot_final.project.model.NoteVO">
+        <![CDATA[
+        select n.noteId,
+               n.userId,
+               n.noteTitle,
+               n.note,
+               n.pageViewState,
+               n.noteLike,
+               n.noteCommentNum,
+               n.noteCreatedDate,
+               u.userNickname
+        from note n,
+             user u
+        where n.noteId = #{noteId}
+          and n.userId = u.userId;
+        ]]>
+    </select>
+
+    <select id="selectNoteCount" parameterType="hashmap" resultType="int">
+        <![CDATA[
+        select count(*)
+        from note
+        where category = #{category}
+          and noteTitle like CONCAT('%', #{keyword}, '%')
+          and pageViewState = 'POST'
+        ]]>
+    </select>
+
+    <select id="selectNoteListFilter" parameterType="hashmap" resultType="com.spring_boot_final.project.model.NoteVO">
+        select n.noteId,
+        n.userId,
+        n.noteTitle,
+        n.note,
+        n.noteLike,
+        n.noteCommentNum,
+        n.noteCreatedDate,
+        u.userNickname
+        from note n,
+        user u
+        where n.userId = u.userId
+        and n.category = #{category}
+        and n.pageViewState = 'POST'
+        and n.noteTitle like CONCAT('%', #{keyword}, '%')
+        <choose>
+            <when test="sort == 'new'">
+                order by n.noteCreatedDate DESC
+            </when>
+            <when test="sort == 'popular'">
+                order by n.noteLike DESC
+            </when>
+            <otherwise>
+                order by n.noteCreatedDate DESC
+            </otherwise>
+        </choose>
+        limit 10 offset #{page};
+    </select>
+
+    <select id="selectNoteLike" parameterType="com.spring_boot_final.project.model.NoteVO" resultType="int">
+<![CDATA[
+        select count(*)
+        from noteLike
+        where noteId = #{noteId}
+          and userId = #{userId};
+        ]]>
+    </select>
+	
+	
+	<!-- 마이페이지 게시글 조회 -->
+	<select id="selectNoteView" parameterType="string" resultType="com.spring_boot_final.project.model.NoteVO">
+        <![CDATA[
+        select *
+        from note
+        where userId = #{userId}
+        and pageViewState = 'POST'
+        ]]>
+    </select>
+	
+    <!-- Update -->
+
+    <update id="updateNote" parameterType="com.spring_boot_final.project.model.NoteVO">
+<![CDATA[
+        UPDATE note
+        SET category=#{category},
+            noteTitle=#{noteTitle},
+            note=#{note}
+        WHERE noteId = #{noteId}
+          AND userId = #{userId}
+        ]]>
+    </update>
+
+    <update id="updateNoteLikeUp" parameterType="int">
+<![CDATA[
+        UPDATE note
+        SET noteLike=noteLike + 1
+        WHERE noteId = #{noteId}
+        ]]>
+    </update>
+
+    <update id="updateNoteLikeDown" parameterType="int">
+<![CDATA[
+        UPDATE note
+        SET noteLike=noteLike - 1
+        WHERE noteId = #{noteId}
+        ]]>
+    </update>
+
+    <update id="updateNoteCommentUp" parameterType="int">
+<![CDATA[
+        UPDATE note
+        SET noteCommentNum=noteCommentNum + 1
+        WHERE noteId = #{noteId}
+        ]]>
+    </update>
+
+    <update id="updateNoteCommentDown" parameterType="int">
+<![CDATA[
+        UPDATE note
+        SET noteCommentNum=noteCommentNum - 1
+        WHERE noteId = #{noteId}
+        ]]>
+    </update>
+
+    <!-- Delete -->
+
+    <update id="deleteNote" parameterType="com.spring_boot_final.project.model.NoteVO">
+<![CDATA[
+        UPDATE note
+        SET pageViewState = 'DELETE'
+        WHERE noteId = #{noteId}
+          AND userId = #{userId}
+        ]]>
+    </update>
+
+    <delete id="deleteNoteLike" parameterType="com.spring_boot_final.project.model.NoteVO">
+<![CDATA[
+        delete
+        from noteLike
+        where noteId = #{noteId}
+          and userId = #{userId};
+        ]]>
+    </delete>
+    
+    <!-- 마이페이지 게시글 삭제 -->
+    <delete id="deleteNoteView" parameterType="int">
+        <![CDATA[
+        delete
+        from note
+        where noteId = #{noteId}
+        ]]>
+    </delete>
+
+
+</mapper>

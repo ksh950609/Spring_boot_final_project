@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+#chatHeader {
+	background-color : black;
+	color : #eeeeee;
+	height : 25px;
+	padding: 15px 15px;
+	border-bottom : solid 2px rgba(0, 0, 0, 0.1);
+ 	/* box-shadow:0 3px 0px 0px rgba(0, 0, 0, 0.5); */
+ 	line-height: 25px;
+ 	border-radius:12px 12px 0px 0px;
+}
+
+#chatHeader button {
+	color : #eeeeee;
+}
+
+#btnClose {
+	border: none;
+	background: none;
+	float: right;
+	line-height: 25px;
+	}
+ 
+#chatBox {
+	height: 600px;
+	width: 500px;
+	overflow-y:scroll;
+	padding:10px 15px;
+	background:#fff;
+	    } 	
+
+#message {
+	height : 33px;
+	width: 230px;
+	padding-left : 10px;
+	margin-left : 14px;
+	margin-top : 5px;
+	border : none;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: black;
+	}
+
+#submitBtn {
+	width : 27px;
+	height : 27px;
+	float: right;
+	background-color : #fff;
+	padding-right:12px;
+	margin-right:5px;
+	margin-top:10px;
+	border-color : #000;
+	border-radius : 2px;
+	}
+
+
+.msgBox  span {
+	padding:3px 5px;
+	word-break:break-all;
+	display:block; 
+	max-width:200px; 
+	margin-bottom: 5px;
+	border-radius:0px 10px 10px 10px
+}
+							 
+.msgBox.send  span {
+	background:#000;
+	color : #fff;
+	float:right;
+	border-radius:10px 0px 10px 10px;
+	font-size : 15px;
+	padding: 10px 10px 10px 10px;
+	}
+
+.msgBox #in {
+	padding:0px 0px 0px 0px;
+	width:500px;
+	background:#ebebeb;
+	border :none;
+	/* border : solid 2px black; */
+	}
+
+.msgBox.receive  span {
+	background:#fff;
+	float:left;
+	font-size : 15px;
+	padding: 10px 10px 10px 10px;
+}
+
+
+#chatbotTest{
+	display:none; 	/* 안 보임. 차지하고 있는 영역도 없음 */
+	position : absolute;
+	position: fixed;
+	right : 15px;
+	/* top : 37%; */
+	bottom : 5%; 
+	width : 310px;
+	height : 500px;
+	box-shadow: 0 2px 3px 3px rgba(0, 0, 0, 0.1);
+	/* offset-x | offset-y | blur-radius | spread-radius | color */
+	background-color : #fff;
+	border-radius: 12px;
+	z-index : 500;
+	padding-bottom : 25px;
+}
+
+#chatBox {
+	height: 400px;
+	width: 280px;
+	overflow-y:scroll;
+	padding:10px 15px;
+	background:#ebebeb;
+}
+
+#chatImage img {
+    position: absolute;
+    position: fixed;
+    right: 2%;
+    top: 84%;
+    width: auto;
+    height: 10%;
+    filter: drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.1));
+}
+
+input:focus {
+	outline: none; /* outline 테두리 없애기 */
+	}
+	
+
+.msgBox.receive.chatbotUrl a {
+	color : #000;
+	font-size : 15px;
+}
+
+.msgBox.receive.chatbotUrl{
+	background:#fff;
+	float:left;
+	font-size : 15px;
+	padding: 10px 10px 10px 10px;
+	word-break:break-all;
+	display:block; 
+	max-width:200px; margin-bottom: 10px;
+	border-radius: 10px;
+	border : 1px solid #000;
+	
+}
+
+.chatbotImg {
+	padding : 10px;
+	background : #fff;
+	border-radius: 10px;
+	width : 160px;
+	height : 210px;
+	float:left;
+	text-align : center;
+	line-height : 290px;
+}
+
+#chatbotTitle{
+	font-size : 16px;
+	font-weight : bold;
+}
+
+.subtitle{
+	padding-left: 10px;
+}
+
+#linkImage img {
+	width: 10px;
+	height: 10px;
+}
+
+/** 스크롤바 **/
+#chatBox::-webkit-scrollbar {
+    width: 8px;  /* 스크롤바의 너비 */
+}
+
+#chatBox::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: #000; /* 스크롤바의 색상 */
+    
+    border-radius: 10px;
+}
+
+#chatBox::-webkit-scrollbar-track {
+    background: #ebebeb;  /*스크롤바 뒷 배경 색상*/
+     border-radius: 10px;
+}

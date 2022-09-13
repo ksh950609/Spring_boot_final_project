@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring_boot_final.project.dao.ICertifyDAO">
+
+    <!-- Create -->
+
+    <insert id="createCertify" parameterType="hashmap">
+        <![CDATA[
+        INSERT INTO certify (userEmail, certifyNum)
+        VALUES (#{userEmail}, #{certifyNum});
+        ]]>
+    </insert>
+
+    <!-- Read -->
+
+    <select id="readCertify" parameterType="string" resultType="string">
+        <![CDATA[
+        select certifyNum
+        from certify
+        where userEmail = #{userEmail};
+        ]]>
+    </select>
+
+    <select id="readCertifyCount" parameterType="string" resultType="int">
+        <![CDATA[
+        select count(*)
+        from certify
+        where userEmail = #{userEmail};
+        ]]>
+    </select>
+
+    <!-- Update -->
+
+    <!-- Delete -->
+
+    <delete id="deleteCertify" parameterType="string">
+        <![CDATA[
+        delete
+        from certify
+        where userEmail = #{userEmail};
+        ]]>
+    </delete>
+
+
+</mapper>

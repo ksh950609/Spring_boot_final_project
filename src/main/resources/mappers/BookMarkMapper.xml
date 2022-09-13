@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.spring_boot_final.project.dao.IBookMarkDAO">
+	<!-- (1) 북마크 목록 출력 -->
+	<select id="bookMarkList" parameterType="String" resultType="com.spring_boot_final.project.model.BookMarkVO">
+		
+		SELECT b.bookmarkId, b.bookmarkAt, e.exhbnId, e.exhbnTitle, e.exhbnImgUrl, b.userId
+		fROM bookmark b, exhbn e
+		WHERE e.exhbnId = b.exhbnId AND b.userId=#{userId}
+		ORDER BY b.exhbnId
+		
+	</select>
+	
+	<!-- (2) 북마크에 추가 -->
+	<insert id="insertBookMark" parameterType="com.spring_boot_final.project.model.BookMarkVO">
+		INSERT INTO bookmark (userId, exhbnId)
+		VALUES (#{userId}, #{exhbnId})
+	</insert>
+	
+	<!-- (3) 북마크 목록에 동일한 전시가 있는지 확인 -->
+	<select id="checkExInBookMark" parameterType="hashmap" resultType="int">
+		SELECT COUNT(*)
+		FROM bookmark
+		WHERE exhbnId=#{exhbnId} AND userId=#{userId}
+	</select>
+
+	
+	<!-- deleteBookMark -->
+	<!-- <update id="deleteBookMark" parameterType="com.spring_boot_final.project.model.BookMarkVO">
+        <![CDATA[
+        UPDATE bookmark
+        SET pageViewState='DELETE'
+        WHERE exhbnId = #{exhbnId}
+          AND userId = #{userId}
+        ]]>
+    </update> -->
+    
+    <delete id="deleteBookMark" parameterType="com.spring_boot_final.project.model.BookMarkVO">
+        <![CDATA[
+        delete
+        from bookmark
+        where bookmarkId = #{bookmarkId}
+          and userId = #{userId};
+        ]]>
+    </delete>
+    
+    <select id="selectBookMark" parameterType="int" resultType="com.spring_boot_final.project.model.BookMarkVO">
+        <![CDATA[
+        select *
+        from bookmark
+        where bookmarkId = #{bookmarkId};
+        ]]>
+    </select>
+    
+</mapper>

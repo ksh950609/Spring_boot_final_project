@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+/* myPageComment.css */
+
+@font-face {
+	font-family: 'establishRetrosansOTF';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRetrosansOTF.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.logo {
+    font-family: 'establishRetrosansOTF';
+    font-size: 40px;
+    color: #000;
+    text-decoration: none;
+}
+
+/* 전체 틀 */
+.wrapper {
+	/*  푸터 하단 고정 */
+	padding-bottom: 25%;
+	max-width : 1390px;
+	margin: 0 auto;
+	min-width : 1080px;
+}
+
+#course-container {
+    width:100%;
+    min-width: 1080px;
+    min-height: auto;
+    background-color: rgba(255,255,255,1);
+    --web-view-name: coursepage;
+    --web-view-id: coursepage;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+    position: relative;
+}
+
+.course-box {
+    margin-top: 50px;
+    line-height: 2.3rem;
+    border-bottom: black 2px solid;
+    padding: 20px 0;
+    display:flex;
+}
+
+
+.course-box>nav {
+	display:flex;
+	width:30%;
+
+}
+
+/* 탭 메뉴 */
+.tabMenu {
+	width:100%;
+	border-right:2px solid #aaa;
+}
+
+.tabMenu li {
+	margin-top:15%;
+}
+
+.tabMenu li:first-child {
+	margin:0;
+} 
+
+.tabMenu li a {
+	color:#949494;
+	font-size:20px;
+}
+
+
+.tabMenu li:nth-child(5) a, .tabMenu li a:hover {
+	color:#000;
+	font-weight:bold;
+}
+
+.titleBox a {
+	font-weight:bold;
+	font-size:20px;
+	margin-left:3%;
+	color:#949494;
+	
+}
+
+/* 개인정보 수정 */
+.titleBox {
+	margin-top:3%;
+}
+
+.titleBox a:nth-child(2) {
+	color:#000;
+}
+
+.titleBox a:hover {
+	color:#000;
+	font-weight:bold;
+}
+
+.myPageBox {
+	width:100%;
+	height:auto;
+	min-height:100%;
+	margin-left:2%;
+}
+
+/* 스크랩, 좋아요, 코스 */
+.myPageBox h2 {
+	font-size:28px;
+	color:#000;
+	margin-bottom:2%;
+}
+
+/* 선 */
+.line {
+	border:1px solid #000;
+}
+
+/* 테이블 */
+ .tableBox {
+	overflow-x: hidden;
+	overflow-y: hidden;
+ 	margin:0 5% auto;
+ 	margin-top:3%;
+ }
+ 
+ /* 정보 */
+ .infoBox {
+ 	display:flex;
+ 	width:100%;
+ 	align-items:center;
+ 	vertical-align:middle;
+ 	text-align:center;
+ }
+ 
+
+.tableBox {
+	margin-top:3%;
+}
+
+table {
+	width:100%;
+	height: auto;
+    margin-bottom: 40%;
+}
+
+table th {
+	border-top:2px solid #000;
+	border-bottom :2px solid #000;
+	font-weight:bold;
+	background:#F6F6F6;
+	padding:20px;
+	height:auto;
+	line-height:auto;
+	text-align:center;	
+}
+
+
+table td {
+	text-align:center;
+	padding:3% 0;
+	items-align:center;
+	border-bottom :2px solid #000;
+}

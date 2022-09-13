@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+#course-wrap {
+    width:100%;
+    min-width: 1080px;
+    min-height: auto;
+    background-color: rgba(255,255,255,1);
+    --web-view-name: coursepage;
+    --web-view-id: coursepage;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+    position: relative;
+}
+
+#searchAreaBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.AREA{
+	text-align : center;
+	line-height : 40px;
+	width : 140px;
+}
+
+.AREA:hover {
+	background-color: #000;
+	width:140px;
+	height: 50px;
+	line-height: 40px;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 6px;
+}
+
+.AREA:hover a {
+	color : #fff;
+}
+
+#searchArea .selected {
+	background-color: #000;
+	width:140px;
+	height: 50px;
+	line-height: 40px;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 6px;
+}
+
+
+.tabList >ul> li {
+	margin-top : 2%;
+}
+
+.search-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-top:0;
+    margin-bottom: 10px;
+}
+
+#tagList {
+   margin-bottom: 1.8rem;
+}
+
+.tag {
+
+}
+
+.courseBoard-searchBtn {
+    width: 110px;
+    /* min-width: 150px; */
+    margin-left: 10px;
+    height: 59px;
+    margin-top : 12px;
+    
+}
+
+#tag-caution {
+    margin-top:-30px;
+    margin-bottom: 0;
+}
+
+.tablist-box {
+    display: flex;
+}
+
+.tablist-box .tab-box {
+    margin: 5px;
+}
+
+.tablist-box button {
+    color: rgb(0,0,0,0.6);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+}
+
+.courseboard-search-box {
+    /* display: inline-block; */
+    width:60%;
+    min-height: 0;
+}
+.courseboard-searchbar {
+    width: 100%;
+}
+
+.board-gallery-view {
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    min-height: 100%;
+    border-bottom: none;
+}
+.post-container {
+    margin: 25px 0;
+    width: 29%;
+    height: 430px;
+    border-radius: 15px;
+}
+.post-container:hover {
+    color: rgba(0,0,0,0.7);
+}
+.post-container:hover .post-tag {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.post-img-box {
+    width: 100%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    border-radius: 10px;
+    background-position: 0 30%;
+    background-size: 30vw;
+    /*background-attachment:fixed;*/
+    background-repeat: no-repeat;
+}
+
+.post-container:hover .post-img-box {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.post-title-box {
+    margin: 0 auto;
+    width: 90%;
+    padding: 15px 0 5px 0;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.post-content-box {
+    margin: 0 auto;
+    padding: 5px 0;
+    width: 90%;
+    height: 60px;
+    overflow: hidden;
+    line-height: 1.3rem;
+}
+
+.post-footer-box {
+    padding: 0 20px 5px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.post-writer-box {
+    width: 50%;
+    overflow: visible;
+    white-space: nowrap; 	/* 아래줄로 내려가는걸 막음 */
+	text-overflow: ellipsis;  /*... 만들기 */
+	overflow: hidden;  		/* 영역을 감춤 */
+}
+
+.post-react-box {
+    display: flex;
+    padding: 0 10px;
+}
+
+.post-react-box i {
+    margin: 0 5px 0 15px;
+}
+
+#inner-searchbar {
+    position: relative;
+}
+
+.tabList ul, li {
+    display:inline-block;
+    justify-content: left;
+    min-width: 0;
+}
+
+.post-tag-box {
+    display: flex;
+    padding: 0 15px;
+    justify-content: left;
+}
+
+.post-tag {
+    background-color: black;
+    margin:5px;
+    border-radius: 20px;
+    color: white;
+    font-weight: 300;
+    padding: 2px 15px;
+}
