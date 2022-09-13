@@ -1,1 +1,1 @@
-# ServerPractice
+# 네이버 서버 연습
